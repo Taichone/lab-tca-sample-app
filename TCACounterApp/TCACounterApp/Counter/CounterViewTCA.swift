@@ -7,12 +7,12 @@ struct Counter {
     struct State: Equatable {
         var count = 0
     }
-
+    
     enum Action {
         case decrementButtonTapped
         case incrementButtonTapped
     }
-
+    
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
@@ -29,21 +29,21 @@ struct Counter {
 
 struct CounterView: View {
     let store: StoreOf<Counter>
-
+    
     var body: some View {
         VStack {
             Spacer()
-
+            
             Text("\(self.store.count)")
                 .bold()
                 .font(.system(size: 50))
-
+            
             Spacer()
-
+            
             HStack {
                 LabeledRectangle(type: .minus)
                     .onTapGesture { self.store.send(.decrementButtonTapped) }
-
+                
                 LabeledRectangle(type: .plus)
                     .onTapGesture { self.store.send(.incrementButtonTapped) }
             }
@@ -56,7 +56,7 @@ struct CounterView: View {
 struct LabeledRectangle: View {
     private let image: Image
     private let rectangleColor: Color
-
+    
     init(type: Self.LabelType) {
         switch type {
         case .minus:
@@ -66,9 +66,9 @@ struct LabeledRectangle: View {
             self.image = Image(systemName: "plus")
             self.rectangleColor = .cyan
         }
-
+        
     }
-
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -81,7 +81,7 @@ struct LabeledRectangle: View {
         .padding()
         .shadow(radius: 10)
     }
-
+    
     enum LabelType {
         case plus
         case minus
@@ -89,11 +89,11 @@ struct LabeledRectangle: View {
 }
 
 #Preview {
-  NavigationStack {
-    CounterView(
-      store: Store(initialState: Counter.State()) {
-        Counter()
-      }
-    )
-  }
+    NavigationStack {
+        CounterView(
+            store: Store(initialState: Counter.State()) {
+                Counter()
+            }
+        )
+    }
 }
