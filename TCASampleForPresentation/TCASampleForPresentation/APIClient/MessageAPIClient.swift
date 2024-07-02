@@ -1,14 +1,19 @@
 import Foundation
 
-struct MessageAPIClient {
-    static var messages = [String]()
+class MessageAPIClient {
+    private var messages = [String]()
+    /// singleton pattern object
+    static let shared = MessageAPIClient()
+    private init() {}
+}
 
-    static func fetchMessages() async throws -> [String] {
-        let randomIndex = Int.random(in: 0..<messageList.count)
-        let newMessage = messageList[randomIndex]
-        messages.append(newMessage)
+extension MessageAPIClient: MessageProvider {
+    func fetchMessages() async throws -> [String] {
+        let randomIndex = Int.random(in: 0..<Self.messageList.count)
+        let newMessage = Self.messageList[randomIndex]
+        self.messages.append(newMessage)
         sleep(1)
-        return Self.messages
+        return self.messages
     }
 }
 
@@ -45,4 +50,8 @@ extension MessageAPIClient {
         "どこ行くの？",
         "素敵な一日を！"
     ]
+}
+
+enum MessageError: Error {
+    case fetchError
 }
