@@ -14,9 +14,10 @@
 		528824212C32715C005FF296 /* TCASampleForPresentationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528824202C32715C005FF296 /* TCASampleForPresentationUITests.swift */; };
 		528824232C32715C005FF296 /* TCASampleForPresentationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528824222C32715C005FF296 /* TCASampleForPresentationUITestsLaunchTests.swift */; };
 		528824312C32730C005FF296 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 528824302C32730C005FF296 /* ComposableArchitecture */; };
-		528824342C3273D0005FF296 /* FeatureViewTCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528824332C3273D0005FF296 /* FeatureViewTCA.swift */; };
+		528824342C3273D0005FF296 /* MessageListViewTCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528824332C3273D0005FF296 /* MessageListViewTCA.swift */; };
 		528824372C33D0CD005FF296 /* MessageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528824362C33D0CD005FF296 /* MessageAPIClient.swift */; };
-		528824392C33D11D005FF296 /* TCAMessageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528824382C33D11D005FF296 /* TCAMessageViewTests.swift */; };
+		528824392C33D11D005FF296 /* MessageListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528824382C33D11D005FF296 /* MessageListViewTests.swift */; };
+		5288243B2C33D880005FF296 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288243A2C33D880005FF296 /* MessageListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +47,10 @@
 		5288241C2C32715C005FF296 /* TCASampleForPresentationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCASampleForPresentationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		528824202C32715C005FF296 /* TCASampleForPresentationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASampleForPresentationUITests.swift; sourceTree = "<group>"; };
 		528824222C32715C005FF296 /* TCASampleForPresentationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASampleForPresentationUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		528824332C3273D0005FF296 /* FeatureViewTCA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureViewTCA.swift; sourceTree = "<group>"; };
+		528824332C3273D0005FF296 /* MessageListViewTCA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewTCA.swift; sourceTree = "<group>"; };
 		528824362C33D0CD005FF296 /* MessageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAPIClient.swift; sourceTree = "<group>"; };
-		528824382C33D11D005FF296 /* TCAMessageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAMessageViewTests.swift; sourceTree = "<group>"; };
+		528824382C33D11D005FF296 /* MessageListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewTests.swift; sourceTree = "<group>"; };
+		5288243A2C33D880005FF296 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +123,7 @@
 		528824152C32715C005FF296 /* TCASampleForPresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				528824382C33D11D005FF296 /* TCAMessageViewTests.swift */,
+				528824382C33D11D005FF296 /* MessageListViewTests.swift */,
 			);
 			path = TCASampleForPresentationTests;
 			sourceTree = "<group>";
@@ -138,7 +140,8 @@
 		528824322C3273BA005FF296 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				528824332C3273D0005FF296 /* FeatureViewTCA.swift */,
+				528824332C3273D0005FF296 /* MessageListViewTCA.swift */,
+				5288243A2C33D880005FF296 /* MessageListView.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -288,9 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528824342C3273D0005FF296 /* FeatureViewTCA.swift in Sources */,
+				528824342C3273D0005FF296 /* MessageListViewTCA.swift in Sources */,
 				528824082C32715B005FF296 /* RootView.swift in Sources */,
 				528824062C32715B005FF296 /* TCASampleForPresentationApp.swift in Sources */,
+				5288243B2C33D880005FF296 /* MessageListView.swift in Sources */,
 				528824372C33D0CD005FF296 /* MessageAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528824392C33D11D005FF296 /* TCAMessageViewTests.swift in Sources */,
+				528824392C33D11D005FF296 /* MessageListViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

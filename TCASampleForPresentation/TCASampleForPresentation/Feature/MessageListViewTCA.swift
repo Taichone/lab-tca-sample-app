@@ -94,11 +94,21 @@ struct MessageListView: View {
                     Text(message)
                 }
             }
-            Spacer()
             Button(action: {
                 self.store.send(.fetchMessageButtonTapped)
             }) {
-                Text("最新のメッセージを取得する")
+                ZStack {
+                    Text("最新のメッセージを取得する")
+                        .bold()
+                        .foregroundStyle(.white)
+                        .padding()
+                        .background(content: {
+                            RoundedRectangle(cornerSize: .init(width: 10, height: 10))
+                                .foregroundStyle(.blue)
+                                .shadow(radius: 10)
+                        })
+                }
+
             }
         }
         .alert("Failed to fetch messages", isPresented: self.$store.isShowingAlert) {
